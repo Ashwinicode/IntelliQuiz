@@ -1,0 +1,69 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-6 offset-md-3">
+                <mat-card >
+                    <div class="container text-center">
+                        <img src="../../../assets/register1.jpg" width="20%" height="90%" />
+                    </div>
+                    <h1 class="text-center">Register here</h1>
+
+
+                    <form (ngSubmit)="formSubmit()" class="ml10" style="margin-right: 10px;" >
+
+                        <!-- username field-->
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>User Name</mat-label>
+                            <input required [(ngModel)]="user.username" name="username" matInput
+                                placeholder="Enter here" />
+                            <!-- <mat-hint>User Name must be unique</mat-hint> -->
+                        </mat-form-field>
+
+                        <!-- passsword field-->
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>User Password</mat-label>
+                            <input required [(ngModel)]="user.password" name="password" type="password" matInput
+                                placeholder="Enter here">
+                        </mat-form-field>
+
+                        <!-- first name -->
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>First Name</mat-label>
+                            <input required [(ngModel)]="user.firstname" name="firstname" matInput
+                                placeholder="Enter here">
+                        </mat-form-field>
+
+                        <!-- last name -->
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Last Name</mat-label>
+                            <input required [(ngModel)]="user.lastname" name="lastname" matInput
+                                placeholder="Enter here">
+                        </mat-form-field>
+
+                        <!-- email -->
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>E-mail Address</mat-label>
+                            <input required [(ngModel)]="user.email" name="email" type="email" matInput
+                                placeholder="Enter here">
+                        </mat-form-field>
+
+                        <!-- Phone -->
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Contact Number</mat-label>
+                            <input required [(ngModel)]="user.phone" name="phone" type="number" matInput
+                                placeholder="Enter here">
+                        </mat-form-field>
+
+                        <div class="mb10">
+                            <div class="container text-center">
+                                <button type="submit" mat-raised-button color="primary">Register</button>
+                                <button style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

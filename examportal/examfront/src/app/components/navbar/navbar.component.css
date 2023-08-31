@@ -1,0 +1,13 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-icon-size {
+    /* background-repeat: no-repeat; */
+    /* display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px; */
+    transform: scale(0.7);
+}
+
+

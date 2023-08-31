@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+    <a routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon color="accent">menu_book</mat-icon>
+    </a>
+    <span>Quiz App</span>
+    <span class="example-spacer"></span>
+
+
+    <div class="mat-icon-size">
+        
+        <a *ngIf="!isLoggedIn" routerLink="/login" mat-fab color="accent"class="ml20">
+            <mat-icon matTooltip="Login">login</mat-icon>
+
+
+            <!-- <span class="ml40" >Login</span> -->
+        </a>
+
+
+        <a *ngIf="!isLoggedIn" routerLink="/signup" mat-fab color="accent"
+            aria-label="Example icon button with a delete icon" class="ml20 ">
+            <mat-icon>app_registration</mat-icon>
+        </a>
+
+
+        
+        <a (click)="logout()" *ngIf="isLoggedIn" mat-fab color="accent"
+            aria-label="Example icon button with a delete icon" class="ml20 ">
+            <mat-icon>exit_to_app</mat-icon>
+            <!-- <span class="ml40">Logout</span> -->
+        </a>
+
+        <button *ngIf="isLoggedIn && user" class="example-icon favorite-icon ml20" mat-button
+            aria-label="Example icon-button with heart icon"
+            routerLink="/admin/profile">
+            {{login.getUser().username}}
+        </button>
+
+    </div>
+
+
+</mat-toolbar>

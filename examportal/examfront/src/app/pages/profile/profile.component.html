@@ -1,0 +1,56 @@
+<mat-card class="mt10">
+    <h1 class="mt10 ml10 text-center">Your profile details</h1>
+</mat-card>
+<mat-card class="mt10" *ngIf="user">
+
+    <mat-card-content>
+        <!-- {{user|json}} -->
+        <div class="bootstrap-wrapper">
+            <div class="container text-center" style="margin: 0 auto;">
+                <div class="container">
+                    <img src="https://isobarscience-1bfd8.kxcdn.com/wp-content/uploads/2020/09/default-profile-picture1.jpg"
+                        alt="" class="profile-image">
+                    <h1 class="mt10">{{user.firstname}} {{user.lastname}}</h1>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-10 offset-md-1" style="margin: 0 auto;">
+                        <!-- table details -->
+                        <table class="table text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>UserID</td>
+                                <td>QUIZ{{user.id}}</td>
+                            </tr>
+                            <tr *ngIf="user.phone">
+                                <td >Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                    <td>Email ID</td>
+                                    <td>{{user.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center" style="margin: 0 auto;">
+        <button mat-raised-button color="primary" class="mr10">UPDATE</button>
+        <button mat-raised-button color="accent" class="ml10">SHARE</button>
+    </mat-card-actions>
+</mat-card>
